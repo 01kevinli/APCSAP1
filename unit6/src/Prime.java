@@ -13,34 +13,32 @@ public class Prime
 
 	public Prime()
 	{
-		setPrime(24);
+		setPrime(17);
 
 	}
 
 	public Prime(int num)
 	{
-		setPrime(num);
-
+	setPrime(num);	
 
 	}
 
 	public void setPrime(int num)
 	{
-	number = num;
-
+		number = num;
 
 	}
 
 	public boolean isPrime()
 	{
-		int total = 0
-		for(int i = 1; i<=number; i++) {
-			if(number%1 ==0) {
-				total++;
+		int primetotal = 0;
+		for (int i = 1; i<= number; i++) {
+			if (number%i == 0) {
+				primetotal++;
 			}
 		}
-		if (total == 2) {
-			return false;
+		if(primetotal == 2) {
+			return true;
 		}
 
 
@@ -49,15 +47,21 @@ public class Prime
 
 
 
-		return true;
+		return false;
 	}
 
 	public String toString()
 	{
 		if(isPrime()) {
-			return number + " is not prime";
+			return number + " is a prime number.";
 		}
 
-		return number + "is prime";
+
+
+
+
+
+
+		return number + " is not a prime number.";
 	}
 }

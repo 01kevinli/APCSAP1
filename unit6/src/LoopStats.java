@@ -18,7 +18,7 @@ public class LoopStats
 
 	public LoopStats(int beg, int end)
 	{
-		setNums(beg,end);
+		setNums(beg, end);
 
 
 	}
@@ -34,11 +34,10 @@ public class LoopStats
 	public int getEvenCount()
 	{
 		int evenCount=0;
-		for(int i = beg;i<end;i++) {
-			if(i%2==0) {
+		for(int i = start; i<= stop;i++) {
+			if( i%2 == 0) {
 				evenCount++;
 			}
-			
 		}
 
 
@@ -50,21 +49,12 @@ public class LoopStats
 	public int getOddCount()
 	{
 		int oddCount=0;
-		public int getOddCount()
-		{
-			int OddCount=0;
-			for(int i = beg;i<end;i++) {
-				if(i%2==1) {
-					oddCount++;
-				}
-				
+		for(int i = start; i<= stop;i++) {
+			if( i%2 == 1) {
+				oddCount++;
 			}
-
-
-
-
-			return evenCount;
 		}
+
 
 
 
@@ -75,9 +65,10 @@ public class LoopStats
 	public int getTotal()
 	{
 		int total=0;
-		for(int i = beg;i<end;i++) {
-			total = total + i;
-		}
+		for(int i = start; i<= stop;i++) {
+				total++;
+			}
+		
 
 
 
@@ -86,6 +77,6 @@ public class LoopStats
 	
 	public String toString()
 	{
-		return start + " to " + stop+ ", total odds: "+ getOddCount+ " total evens: "+getEvenCount+" total: " + getTotal;
+		return start + " to " + stop + ": has " +getOddCount()+" odds, "+getEvenCount()+" evens, and "+getTotal()+" total numbers in between.";
 	}
 }
